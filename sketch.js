@@ -8,9 +8,17 @@ var ptimer;
 var clicked=false, clickTimeout=300;
 var clicks2 = 0;
 var doublec2 = 0;
+var ww = 1000;
+var wh = 800;
+var s = 1;
+var fonttikoko = 20;
 function setup() { 
   createCanvas(windowWidth, windowHeight);
 	// colorMode(HSB,360,100,100);
+  ww = windowWidth;
+  wh = windowHeight;
+  s = 900 / windowWidth / 1.5;
+  fonttikoko = round(30 * s)-2;
 	rectMode(CENTER);
 	setInterval(timeIt, 100); // https://editor.p5js.org/denaplesk2/sketches/ryIBFP_lG
 } 
@@ -21,16 +29,16 @@ function draw() {
   rectMode(CENTER);
 	fill(123,123,90);
   
-  rect(mouseX, mouseY, 900, 30,4);
+  rect(mouseX, mouseY, 900 * s, 30 * s,4);
 	// fill(0,0,100);
-	textSize(27);
+	textSize(round(s*30));
 	textAlign(CENTER,CENTER);
 	textFont('Avenir');
 
-  text("VAAKARUODE - for better pRoofs: coming soon " + nfc(timerValue / 10,1), mouseX, mouseY -37);
+  text("VAAKARUODE - for better pRoofs: coming soon ", mouseX, mouseY - s * 33);
 
-  fill(0);
-  text(movec, mouseX, mouseY);
+  fill(100);
+  text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY + s * 33);
 
 	let permin = round(clicks * 600 / timerValue);
 	// text('click: ' + clicks + " OR " + clicks2 + "TIME" + nfc(timerValue / 10,1) + "\nperMin:" + permin, width*0.5,height*0.5+2);
@@ -97,6 +105,10 @@ function touchMoved() {
 //}
 
 function windowResized() {
+
+  s = (900 / windowWidth / 1.5);
+  fonttikoko = round(30 * s)-2;
+
   resizeCanvas(windowWidth, windowHeight);
 }
 function timeIt() {
