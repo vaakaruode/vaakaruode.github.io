@@ -1,3 +1,11 @@
+// ----------------------------------------------
+// vaakaruode.github.io/
+// (c) vaakaruode 2022 - vaakaruode(at)gmail.com
+// see git multiple accounts - one computer:
+// https://talonendm.github.io/2020-11-15-Git_setup/
+// --------------------------------------------------
+
+
 var clicks = 0;
 var timerValue = 0;
 var value = 0;
