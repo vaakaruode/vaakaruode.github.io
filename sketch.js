@@ -43,7 +43,7 @@ function draw() {
   fill(240, 230 + round(vari/5), 140+ vari);
 
   s = windowWidth / 900 * 0.7;
-  fonttikoko = round(30 * s)-2;
+  fonttikoko = round(23 * s)-2;
   rect(windowWidth/2, windowHeight/2, 900 * s, 30 * s,4);
 
   rect(windowWidth/2 - (450 - 50)*s, windowHeight/2 + 27 * s, 100 * s, 22 * s, 2);
@@ -57,7 +57,7 @@ function draw() {
 
 
 	// fill(0,0,100);
-	textSize(round(s*26));
+	textSize(round(s*23));
 	textAlign(CENTER,CENTER);
 	textFont('Avenir');
 
@@ -67,7 +67,7 @@ function draw() {
   var samerow = true;
 
   if (samerow) {
-    text("Vaakaruode Oy - for better pRoofs", windowWidth/2, windowHeight/2 - 1);
+    text("Vaakaruode Oy - for better pRoofs", windowWidth/2, windowHeight/2);
     //textSize(round(s*18));
     //fill(100);
     //text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
@@ -75,10 +75,11 @@ function draw() {
     text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - 1);
     textSize(round(s*18));
     fill(100);
-    text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
+    text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1*s);
   }
 
-  
+  fill(240, 230 + round(vari/5), 140+ vari);
+  text("(c) 2022 vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
   fill(90);
