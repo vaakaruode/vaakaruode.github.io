@@ -5,7 +5,7 @@
 // https://talonendm.github.io/2020-11-15-Git_setup/
 // --------------------------------------------------
 
-
+var ilmakiertaavari = "rgba(200,200,255,1)";
 var clicks = 0;
 var timerValue = 0;
 var value = 0;
@@ -25,7 +25,7 @@ function setup() {
 	// colorMode(HSB,360,100,100);
   ww = windowWidth;
   wh = windowHeight;
-  s = 900 / windowWidth / 1.5;
+  s = windowWidth / 900 * 0.7;
   fonttikoko = round(30 * s)-2;
 	rectMode(CENTER);
 	setInterval(timeIt, 100); // https://editor.p5js.org/denaplesk2/sketches/ryIBFP_lG
@@ -35,18 +35,41 @@ function draw() {
   value = 0;
   background(value,10,10);
   rectMode(CENTER);
-	fill(123,123,90);
-  
-  rect(mouseX, mouseY, 900 * s, 30 * s,4);
+
+
+  var vari = round(50 * mouseX / ww);
+
+	fill(103 + vari, 83+ vari, 90 + vari);
+  fill(240, 230 + round(vari/5), 140+ vari);
+
+  s = windowWidth / 900 * 0.7;
+  fonttikoko = round(30 * s)-2;
+  rect(windowWidth/2, windowHeight/2, 900 * s, 30 * s,4);
+
+  rect(windowWidth/2 - (450 - 50)*s, windowHeight/2 + 27 * s, 100 * s, 22 * s, 2);
+  rect(windowWidth/2 + (450 - 50) *s, windowHeight/2 + 27 * s, 100 * s, 22 * s, 2);
+
+  rect(windowWidth/2 - (450 - 50)*s, windowHeight/2 + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
+  rect(windowWidth/2 + (450 - 50) *s, windowHeight/2 + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
+
+
+  PiirraRoikkuvaAluskate(false);
+
+
 	// fill(0,0,100);
-	textSize(round(s*30));
+	textSize(round(s*26));
 	textAlign(CENTER,CENTER);
 	textFont('Avenir');
 
-  text("VAAKARUODE - for better pRoofs: coming soon ", mouseX, mouseY - s * 33);
+  fill(0,0,255);
+  //text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - s * fonttikoko - 3);
+  text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - 1);
 
+  textSize(round(s*18));
   fill(100);
-  text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY + s * 33);
+  text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
+  fill(50);
+  text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
 
 	let permin = round(clicks * 600 / timerValue);
 	// text('click: ' + clicks + " OR " + clicks2 + "TIME" + nfc(timerValue / 10,1) + "\nperMin:" + permin, width*0.5,height*0.5+2);
@@ -131,3 +154,52 @@ function timeIt() {
 document.ontouchmove = function(event) {
     event.preventDefault();
 };
+
+
+
+
+function PiirraRoikkuvaAluskate() {
+
+
+
+  var aluskateX = 120;
+  var aluskatevari = "rgba(140,140,140,1)";
+  var roikkuma = mouseY / 40;
+
+
+
+  var alotusx = windowWidth/2 - (450 - 50 - 50)*s;
+  var alotusy = windowHeight/2 + (-18 + 30 + 22 + 5) * s;
+  var loppux = windowWidth/2 + (450 - 50 - 50) *s;
+
+  let p1 = { x: alotusx, y: alotusy };
+  let p2 = { x: windowWidth/2 - aluskateX, y: alotusy + roikkuma };
+  let p3 = { x: windowWidth/2 + aluskateX, y: alotusy + roikkuma };
+  let p4 = { x: loppux , y: alotusy };
+
+
+  // https://www.geeksforgeeks.org/p5-js-bezierpoint-function/
+  // noFill();
+  // fill(ilmakiertaavari);
+  noFill();
+  stroke(aluskatevari);
+  // Draw bezier using bezier()
+
+
+  if (roikkuma<4) {
+    aluskatevari = "rgba(200,100,100,1)";
+  }
+  
+  stroke(aluskatevari);
+
+  line(alotusx - 100*s, alotusy, alotusx , alotusy);
+  line(loppux, alotusy, loppux + 100*s, alotusy);
+
+  bezier(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
+
+  stroke('black');
+
+  
+
+
+}
