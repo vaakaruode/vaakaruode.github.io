@@ -78,8 +78,9 @@ function draw() {
     text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1*s);
   }
 
-  fill(240, 230 + round(vari/5), 140+ vari);
-  text("(c) 2022 vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
+  fill(200, 180 + round(vari/5), 120+ vari);
+  textSize(round(s*20));
+  text("&copy; 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
   fill(90);
