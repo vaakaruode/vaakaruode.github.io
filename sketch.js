@@ -78,9 +78,15 @@ function draw() {
     text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1*s);
   }
 
+  // https://www.ssec.wisc.edu/~tomw/java/unicode.html
+  // a=String.fromCharCode(random((0x0021, 0x0FD9)));
+  var copyr = String.fromCharCode(0x00A9);
+  //text(copyr,250,250);
+
+
   fill(200, 180 + round(vari/5), 120+ vari);
   textSize(round(s*20));
-  text("&copy; 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
+  text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
   fill(90);
