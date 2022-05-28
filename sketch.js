@@ -63,12 +63,25 @@ function draw() {
 
   fill(0,0,255);
   //text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - s * fonttikoko - 3);
-  text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - 1);
 
-  textSize(round(s*18));
-  fill(100);
-  text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
-  fill(50);
+  var samerow = true;
+
+  if (samerow) {
+    text("Vaakaruode Oy - for better pRoofs", windowWidth/2, windowHeight/2 - 1);
+    //textSize(round(s*18));
+    //fill(100);
+    //text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
+  } else {
+    text("Vaakaruode Oy", windowWidth/2, windowHeight/2 - 1);
+    textSize(round(s*18));
+    fill(100);
+    text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
+  }
+
+  
+  
+  
+  fill(90);
   text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
 
 	let permin = round(clicks * 600 / timerValue);
@@ -162,7 +175,7 @@ function PiirraRoikkuvaAluskate() {
 
 
 
-  var aluskateX = 120;
+  var aluskateX = 220 * s;
   var aluskatevari = "rgba(140,140,140,1)";
   var roikkuma = mouseY / 40;
 
