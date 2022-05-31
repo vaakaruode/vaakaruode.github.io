@@ -29,6 +29,9 @@ function setup() {
   fonttikoko = round(30 * s)-2;
 	rectMode(CENTER);
 	setInterval(timeIt, 100); // https://editor.p5js.org/denaplesk2/sketches/ryIBFP_lG
+
+  let linkki = createA('https://vaakaruode.github.io/palvelut/', 'PALVELUT');
+
 } 
 
 function draw() { 
@@ -86,8 +89,8 @@ function draw() {
 
   fill(200, 180 + round(vari/5), 120+ vari);
   textSize(round(s*20));
-  let linkki = createA('https://vaakaruode.github.io/palvelut/', 'lue lisää konsultointipalvelusta');
-  linkki.position(windowWidth/2, windowHeight - fonttikoko*2.5);
+  
+  linkki.position(windowWidth/2, windowHeight - fonttikoko*2.3);
   text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
