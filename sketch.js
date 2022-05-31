@@ -112,9 +112,17 @@ function draw() {
 // full screen: https://editor.p5js.org/slow_izzm/sketches/lgzf4tJk6
 function touchStarted () {
 
-  if (mouseY>windowHeight - fonttikoko*2.5) {
-    window.open('https://vaakaruode.github.io/palvelut/');
+  if (windowHeight> windowWidth) {
+    // mobilephone ... otherwise hard to click link
+    if (mouseY>windowHeight - fonttikoko*4) {
+      window.open('https://vaakaruode.github.io/palvelut/');
+    }
+  } else {
+    if (mouseY>windowHeight - fonttikoko*2.5) {
+      window.open('https://vaakaruode.github.io/palvelut/');
+    }
   }
+
 
   let fs = fullscreen();
   if (!fs) {
