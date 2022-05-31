@@ -30,7 +30,7 @@ function setup() {
 	rectMode(CENTER);
 	setInterval(timeIt, 100); // https://editor.p5js.org/denaplesk2/sketches/ryIBFP_lG
 
-  let linkki = createA('https://vaakaruode.github.io/palvelut/', 'PALVELUT');
+  // let linkki = createA('https://vaakaruode.github.io/palvelut/', 'PALVELUT');
 
 } 
 
@@ -90,7 +90,8 @@ function draw() {
   fill(200, 180 + round(vari/5), 120+ vari);
   textSize(round(s*20));
   
-  linkki.position(windowWidth/2, windowHeight - fonttikoko*2.3);
+  // linkki.position(windowWidth/2, windowHeight - fonttikoko*2.3);
+  text("PALVELUT", windowWidth/2, windowHeight - fonttikoko*2.2);
   text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
@@ -104,9 +105,17 @@ function draw() {
 	// text('end: ' + endclicks, width*0.5,height*0.8+2);
 }
 
+
+
+
 // TOUCH ------------------------------------------------------------
 // full screen: https://editor.p5js.org/slow_izzm/sketches/lgzf4tJk6
 function touchStarted () {
+
+  if (mouseY>windowHeight - fonttikoko*2.5) {
+    window.open('https://vaakaruode.github.io/palvelut/');
+  }
+
   let fs = fullscreen();
   if (!fs) {
     fullscreen(true);
