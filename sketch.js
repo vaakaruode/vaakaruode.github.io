@@ -86,6 +86,8 @@ function draw() {
 
   fill(200, 180 + round(vari/5), 120+ vari);
   textSize(round(s*20));
+  let linkki = createA('https://vaakaruode.github.io/palvelut/', 'lue lisää konsultointipalvelusta');
+  linkki.position(windowWidth/2, windowHeight - fonttikoko*2.5);
   text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
