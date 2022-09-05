@@ -20,6 +20,13 @@ var ww = 1000;
 var wh = 800;
 var s = 1;
 var fonttikoko = 20;
+
+let img;
+
+function preload() {
+  img = loadImage('assets/pics/page/building.jpg');
+}
+
 function setup() { 
   createCanvas(windowWidth, windowHeight);
 	// colorMode(HSB,360,100,100);
@@ -32,11 +39,14 @@ function setup() {
 
   // let linkki = createA('https://vaakaruode.github.io/palvelut/', 'PALVELUT');
 
+
+
 } 
 
 function draw() { 
   value = 0;
-  background(value,10,10);
+  image(img, 0, 0, windowWidth, 849/515*windowWidth);
+  background(value,10,10,50);
   rectMode(CENTER);
 
 
@@ -92,11 +102,17 @@ function draw() {
   
   // linkki.position(windowWidth/2, windowHeight - fonttikoko*2.3);
   text("PALVELUT", windowWidth/2, windowHeight - fonttikoko*2.2);
-  text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
+  // text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
+  text(copyr + " 2022 vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
   
   
-  fill(90);
-  text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
+  fill(234);
+  textSize(28);
+  //text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
+
+  if (mouseY>windowHeight - fonttikoko*4) {
+    text("Parempien vesikattojen puolesta - Neuvonta ja palvelut sovitusti", windowWidth/2, windowHeight - fonttikoko*4.2);
+  }
 
 	let permin = round(clicks * 600 / timerValue);
 	// text('click: ' + clicks + " OR " + clicks2 + "TIME" + nfc(timerValue / 10,1) + "\nperMin:" + permin, width*0.5,height*0.5+2);
@@ -112,6 +128,7 @@ function draw() {
 // full screen: https://editor.p5js.org/slow_izzm/sketches/lgzf4tJk6
 function touchStarted () {
 
+  if (false) {
   if (windowHeight> windowWidth) {
     // mobilephone ... otherwise hard to click link
     if (mouseY>windowHeight - fonttikoko*4) {
@@ -122,6 +139,10 @@ function touchStarted () {
       window.open('https://vaakaruode.github.io/palvelut/');
     }
   }
+  }
+  
+  
+
 
 
   let fs = fullscreen();
