@@ -46,7 +46,13 @@ function setup() {
 
 function draw() { 
   value = 0;
-  image(img, 0, 0, windowWidth, 849/515*windowWidth);
+
+  if (windowWidth>windowHeight) {
+    image(img, 0, 0 - mouseY/50, windowWidth, 849/515*windowWidth);
+  } else {
+    image(img, 0-mouseX/100, 0, windowWidth, 849/515*windowWidth*1.4);
+  }
+  
   background(value,10,10,50);
   rectMode(CENTER);
 
@@ -108,11 +114,11 @@ function draw() {
   
   
   fill(234);
-  textSize(28);
+  textSize(18);
   //text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
 
-  if (mouseY>windowHeight - fonttikoko*4) {
-    text("Parempien vesikattojen puolesta - Neuvonta ja palvelut sovitusti", windowWidth/2, windowHeight - fonttikoko*4.2);
+  if (mouseY>windowHeight - fonttikoko*5) {
+    text("Parempien vesikattojen puolesta\nNeuvonta ja palvelut sovitusti", windowWidth/2, windowHeight - fonttikoko*5.2);
   }
 
 	let permin = round(clicks * 600 / timerValue);
