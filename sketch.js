@@ -3,6 +3,7 @@
 // (c) vaakaruode 2022 - vaakaruode(at)gmail.com
 // see git multiple accounts - one computer:
 // https://talonendm.github.io/2020-11-15-Git_setup/
+// git push git@github-vaakaruode:vaakaruode/vaakaruode.github.io.git
 // --------------------------------------------------
 
 var ilmakiertaavari = "rgba(200,200,255,1)";
