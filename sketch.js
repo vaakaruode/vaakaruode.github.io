@@ -25,7 +25,7 @@ var fonttikoko = 20;
 let img;
 
 function preload() {
-  img = loadImage('assets/pics/page/building.jpg');
+  img = loadImage('assets/pics/page/vaakalarges.jpg');
 }
 
 function setup() { 
@@ -47,11 +47,26 @@ function setup() {
 function draw() { 
   value = 0;
 
-  if (windowWidth>windowHeight) {
-    image(img, 0, 0 - mouseY/50, windowWidth, 849/515*windowWidth);
+  var uusikuva = true;
+var kerroinskaala;
+  if (uusikuva) {
+    if (windowWidth>windowHeight) {
+      image(img, 0, 0 - mouseY/20, windowWidth, 1*windowWidth);
+    } else {
+      kerroinskaala = windowHeight/windowWidth;
+      
+
+      image(img, 0-mouseX/20, 0, windowHeight, windowHeight);
+    }
   } else {
-    image(img, 0-mouseX/100, 0, windowWidth, 849/515*windowWidth*1.4);
+    if (windowWidth>windowHeight) {
+      image(img, 0, 0 - mouseY/50, windowWidth, 849/515*windowWidth);
+    } else {
+      image(img, 0-mouseX/100, 0, windowWidth, 849/515*windowWidth*1.4);
+    }
   }
+
+ 
   
   background(value,10,10,50);
   rectMode(CENTER);
