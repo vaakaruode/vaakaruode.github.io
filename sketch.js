@@ -25,7 +25,7 @@ var fonttikoko = 20;
 let img;
 
 function preload() {
-  img = loadImage('assets/pics/page/vaakalarges.jpg');
+  img = loadImage('assets/pics/page/vaakars.jpg');
 }
 
 function setup() { 
@@ -51,23 +51,34 @@ function draw() {
 var kerroinskaala;
   if (uusikuva) {
 
-    var liikemax = 2;
+    var liikemax = 10;
 
     if (windowWidth>windowHeight) {
 
-      kerroinskaala = 2880 / windowWidth * windowHeight; // * (1 + 1/liikemax/2);
-      kerroinskaala = max(kerroinskaala, windowWidth);
-      kerroinskaala = kerroinskaala + mouseX/liikemax;
+      kerroinskaala = windowWidth / windowHeight; // * (1 + 1/liikemax/2);
+      // kerroinskaala = max(kerroinskaala, windowWidth);
+      //kerroinskaala = kerroinskaala + mouseX/liikemax;
 
-      var siirrakohta = 
+      imageMode(CORNER);
+      var siirrakohtax = windowWidth - img.width;
+      var siirrakohtay = windowHeight - img.height;
 
-      image(img, 0-mouseX/liikemax, 0 - mouseY/liikemax, kerroinskaala, kerroinskaala);
+      if (siirrakohtax<0) siirrakohtax = 0;
+      if (siirrakohtay<0) siirrakohtay = 0;
+
+      image(img, -siirrakohtax - mouseX/liikemax -  windowWidth/liikemax, siirrakohtay + mouseY/liikemax-  windowWidth/liikemax, windowWidth * 1.3, windowWidth * 1.3);
+
     } else {
-      kerroinskaala = 2880 / windowHeight * windowWidth; // * (1 + 1/liikemax/2);
-      kerroinskaala = max(kerroinskaala, windowHeight);
-      kerroinskaala = kerroinskaala*0.7 + mouseY/liikemax;
+      kerroinskaala = windowHeight / windowWidth; // * (1 + 1/liikemax/2);
+      //kerroinskaala = max(kerroinskaala, windowWidth);
+      //kerroinskaala = kerroinskaala + mouseX/liikemax;
 
-      image(img, -500-mouseX/liikemax, -300 -mouseY/liikemax, kerroinskaala, kerroinskaala);
+      imageMode(CORNER);
+      var siirrakohtax = windowWidth - img.width;
+      var siirrakohtay = windowHeight - img.height;
+      if (siirrakohtax<0) siirrakohtax = 0;
+      if (siirrakohtay<0) siirrakohtay = 0;
+      image(img, -siirrakohtax - mouseX/liikemax - windowWidth/liikemax, siirrakohtay - mouseY/liikemax-  windowWidth/liikemax, windowWidth * kerroinskaala* 1.3, windowWidth * 1.3* kerroinskaala);
     }
   } else {
     if (windowWidth>windowHeight) {
