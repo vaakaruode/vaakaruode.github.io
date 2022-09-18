@@ -50,13 +50,24 @@ function draw() {
   var uusikuva = true;
 var kerroinskaala;
   if (uusikuva) {
-    if (windowWidth>windowHeight) {
-      image(img, 0, 0 - mouseY/20, windowWidth, 1*windowWidth);
-    } else {
-      kerroinskaala = windowHeight/windowWidth;
-      
 
-      image(img, 0-mouseX/20, 0, windowHeight, windowHeight);
+    var liikemax = 2;
+
+    if (windowWidth>windowHeight) {
+
+      kerroinskaala = 2880 / windowWidth * windowHeight; // * (1 + 1/liikemax/2);
+      kerroinskaala = max(kerroinskaala, windowWidth);
+      kerroinskaala = kerroinskaala + mouseX/liikemax;
+
+      var siirrakohta = 
+
+      image(img, 0-mouseX/liikemax, 0 - mouseY/liikemax, kerroinskaala, kerroinskaala);
+    } else {
+      kerroinskaala = 2880 / windowHeight * windowWidth; // * (1 + 1/liikemax/2);
+      kerroinskaala = max(kerroinskaala, windowHeight);
+      kerroinskaala = kerroinskaala*0.7 + mouseY/liikemax;
+
+      image(img, -500-mouseX/liikemax, -300 -mouseY/liikemax, kerroinskaala, kerroinskaala);
     }
   } else {
     if (windowWidth>windowHeight) {
@@ -133,7 +144,7 @@ var kerroinskaala;
   //text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
 
   if (mouseY>windowHeight - fonttikoko*5) {
-    text("Parempien vesikattojen puolesta\nNeuvonta ja palvelut sovitusti", windowWidth/2, windowHeight - fonttikoko*5.2);
+    text("Parempien vesikattojen puolesta\nNeuvonta ja selvitystyöt sovitusti", windowWidth/2, windowHeight - fonttikoko*7.2);
   }
 
 	let permin = round(clicks * 600 / timerValue);
