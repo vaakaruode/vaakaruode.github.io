@@ -162,7 +162,7 @@ var kerroinskaala;
 
   if (mouseY>windowHeight - fonttikoko*5) {
     // text("Parempien vesikattojen puolesta\nNeuvonta ja selvitystyöt sovitusti", windowWidth/2, windowHeight - fonttikoko*7.2);
-    text("Vaakaruode palvelu:\nRakennusalan selvitystyöt sekä\ntekoäly- ja koneoppimisratkaisut sovitusti", windowWidth/2, fonttikoko*7.2);
+    text("Vaakaruode:\nRakennusalan selvitystyöt sekä\ntekoäly- ja koneoppimisratkaisut sovitusti", windowWidth/2, fonttikoko*7.2);
   }
 
 	let permin = round(clicks * 600 / timerValue);
