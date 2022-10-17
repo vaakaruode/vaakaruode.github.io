@@ -21,6 +21,7 @@ var ww = 1000;
 var wh = 800;
 var s = 1;
 var fonttikoko = 20;
+var placey = windowHeight - fonttikoko*7.2;
 
 let img;
 
@@ -102,13 +103,16 @@ var kerroinskaala;
 
   s = windowWidth / 900 * 0.7;
   fonttikoko = round(23 * s)-2;
+
+
+
   rect(windowWidth/2, windowHeight/2, 900 * s, 30 * s,4);
 
-  rect(windowWidth/2 - (450 - 50)*s, windowHeight/2 + 27 * s, 100 * s, 22 * s, 2);
-  rect(windowWidth/2 + (450 - 50) *s, windowHeight/2 + 27 * s, 100 * s, 22 * s, 2);
+  rect(windowWidth/2 - (450 - 50)*s, placey + 27 * s, 100 * s, 22 * s, 2);
+  rect(windowWidth/2 + (450 - 50) *s, placey + 27 * s, 100 * s, 22 * s, 2);
 
-  rect(windowWidth/2 - (450 - 50)*s, windowHeight/2 + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
-  rect(windowWidth/2 + (450 - 50) *s, windowHeight/2 + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
+  rect(windowWidth/2 - (450 - 50)*s, placey + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
+  rect(windowWidth/2 + (450 - 50) *s, placey + (30 + 22 + 3) * s, 100 * s, 32 * s, 2);
 
 
   PiirraRoikkuvaAluskate(false);
@@ -157,7 +161,7 @@ var kerroinskaala;
 
   if (mouseY>windowHeight - fonttikoko*5) {
     // text("Parempien vesikattojen puolesta\nNeuvonta ja selvitystyöt sovitusti", windowWidth/2, windowHeight - fonttikoko*7.2);
-    text("Rakennusalan tekoäly-, koneoppimisratkaisut ja muut selvitystyöt sovitusti", windowWidth/2, fonttikoko*7.2);
+    text("Rakennusalan selvitystyöt sekä tekoäly- ja koneoppimisratkaisut sovitusti", windowWidth/2, fonttikoko*7.2);
   }
 
 	let permin = round(clicks * 600 / timerValue);
@@ -279,7 +283,7 @@ function PiirraRoikkuvaAluskate() {
 
 
   var alotusx = windowWidth/2 - (450 - 50 - 50)*s;
-  var alotusy = windowHeight/2 + (-18 + 30 + 22 + 5) * s;
+  var alotusy = placey + (-18 + 30 + 22 + 5) * s;
   var loppux = windowWidth/2 + (450 - 50 - 50) *s;
 
   let p1 = { x: alotusx, y: alotusy };
