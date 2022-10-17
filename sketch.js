@@ -52,6 +52,7 @@ var kerroinskaala;
   if (uusikuva) {
 
     var liikemax = 10;
+    var liikemay = 3;
 
     if (windowWidth>windowHeight) {
 
@@ -66,7 +67,7 @@ var kerroinskaala;
       if (siirrakohtax<0) siirrakohtax = 0;
       if (siirrakohtay<0) siirrakohtay = 0;
 
-      image(img, -siirrakohtax - mouseX/liikemax -  windowWidth/liikemax, siirrakohtay + mouseY/liikemax-  windowWidth/liikemax, windowWidth * 1.3, windowWidth * 1.3);
+      image(img, -siirrakohtax - mouseX/liikemax -  windowWidth/liikemax, siirrakohtay + mouseY/liikemay-  windowWidth/liikemay, windowWidth * 1.2, windowWidth * 1.2);
 
     } else {
       kerroinskaala = windowHeight / windowWidth; // * (1 + 1/liikemax/2);
@@ -78,7 +79,7 @@ var kerroinskaala;
       var siirrakohtay = windowHeight - img.height;
       if (siirrakohtax<0) siirrakohtax = 0;
       if (siirrakohtay<0) siirrakohtay = 0;
-      image(img, -siirrakohtax - mouseX/liikemax - windowWidth/liikemax, siirrakohtay - mouseY/liikemax-  windowWidth/liikemax, windowWidth * kerroinskaala* 1.3, windowWidth * 1.3* kerroinskaala);
+      image(img, -siirrakohtax - mouseX/liikemay - windowWidth/liikemay, siirrakohtay - mouseY/liikemax-  windowWidth/liikemax, windowWidth * kerroinskaala* 1.3, windowWidth * 1.3* kerroinskaala);
     }
   } else {
     if (windowWidth>windowHeight) {
@@ -124,7 +125,7 @@ var kerroinskaala;
   var samerow = true;
 
   if (samerow) {
-    text("Vaakaruode Oy - for better pRoofs", windowWidth/2, windowHeight/2);
+    text("Vaakaruode Oy - for better pRoofs", windowWidth/2,  windowHeight - fonttikoko*6.2);
     //textSize(round(s*18));
     //fill(100);
     //text("for better pRoofs", windowWidth/2, windowHeight/2 + s * fonttikoko + 1);
@@ -147,7 +148,7 @@ var kerroinskaala;
   // linkki.position(windowWidth/2, windowHeight - fonttikoko*2.3);
   text("PALVELUT", windowWidth/2, windowHeight - fonttikoko*2.2);
   // text(copyr + " 2022 @vaakaruode - vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
-  text(copyr + " 2022 vaakaruode@gmail.com", windowWidth/2, windowHeight - fonttikoko);
+  text(copyr + " 2022 vaakaruode@gmail.com (TkT Jaakko Talonen)", windowWidth/2, windowHeight - fonttikoko);
   
   
   fill(234);
@@ -155,7 +156,8 @@ var kerroinskaala;
   //text(movec + " (" + nfc(timerValue / 10,1) + ")", mouseX, mouseY - s * 33 / 2);
 
   if (mouseY>windowHeight - fonttikoko*5) {
-    text("Parempien vesikattojen puolesta\nNeuvonta ja selvitystyöt sovitusti", windowWidth/2, windowHeight - fonttikoko*7.2);
+    // text("Parempien vesikattojen puolesta\nNeuvonta ja selvitystyöt sovitusti", windowWidth/2, windowHeight - fonttikoko*7.2);
+    text("Rakennusalan tekoäly-, koneoppimisratkaisut ja muut selvitystyöt sovitusti", windowWidth/2, fonttikoko*7.2);
   }
 
 	let permin = round(clicks * 600 / timerValue);
