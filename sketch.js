@@ -22,6 +22,8 @@ var wh = 800;
 var s = 1;
 var fonttikoko = 20;
 
+// 29.1.2023
+var fullscreen_enable = false;
 
 let img;
 
@@ -193,13 +195,17 @@ function touchStarted () {
   }
   
   
+  
 
 
-
-  let fs = fullscreen();
-  if (!fs) {
-    fullscreen(true);
+  if (fullscreen_enable) {
+    let fs = fullscreen();
+    if (!fs) {
+      fullscreen(true);
+    }
   }
+
+
   value = 0;
   if (ptimer == timerValue) {
 	  // double

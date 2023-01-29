@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
 	
+    <title>Vaakaruode Oy</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X53KNGJC15"></script>
@@ -20,6 +21,31 @@
 
 	</head>
   <body>
-    <script src="sketch.js"></script>
+    <div id="vaakasivu">
+      <script src="sketch.js"></script>
+    </div>
+    <div id="cookieNotice" class="light display-right" style="display: none;">
+      <div id="closeIcon" style="display: none;">
+      </div>
+      <div class="title-wrap">
+          <h4>Cookie Consent</h4>
+      </div>
+      <div class="content-wrap">
+          <div class="msg-wrap">
+              <p>This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our  <a style="color:#115cfa;" href="/vaakaruode.github.io/privacy-policy">Privacy Policy</a></p>
+              <div class="btn-wrap">
+                  <button class="btn-primary" onclick="acceptCookieConsent();">Accept</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="assets/js/cookieconsent.js"></script>
+
+
   </body>
 </html>
+ <!--
+We use cookies to analyze our traffic for a better experience. By continuing, you agree to their use.
+Just a heads up, this website uses cookies to make your browsing experience better and show you personalized recommendations. By continuing to use the site, you're cool with that.
+ -->
