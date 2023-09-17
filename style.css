@@ -1,7 +1,9 @@
 html, body {
-  overflow: hidden;
+  overflow: auto; /* or overflow: scroll; -- or hidden, then scrolling is not possible */
   margin: 0;
   padding: 0;
+  background-color: rgb(18, 20, 15);
+  color: black;
 }
 .cookie-overlay {
   position: fixed;
@@ -31,3 +33,75 @@ html, body {
 .title-wrap-policy {
   font-size: 24px;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  flex: 0 0 calc(49% - 20px);
+  margin: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.2);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .image-caption {
+  opacity: 1;
+}
+/* Style for the top bar */
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s; /* Add a smooth transition for the top property */
+}
+
+/* Style for the buttons */
+.button {
+  background-color: #090a09;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Add some hover effect to the buttons */
+.button:hover {
+  background-color: #122413;
+}
+

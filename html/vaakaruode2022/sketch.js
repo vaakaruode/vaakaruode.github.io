@@ -28,7 +28,7 @@ var fullscreen_enable = false;
 let img;
 
 function preload() {
-  img = loadImage('assets/pics/page/vaakars.jpg');
+  img = loadImage('https://vaakaruode.github.io/assets/pics/page/vaakars.jpg');
 }
 
 function setup() { 
