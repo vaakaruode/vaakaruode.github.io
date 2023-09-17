@@ -2,7 +2,8 @@
 // s: 29.1.2023
 // Create cookie
 
-var ask_everytime = true;
+// 17.9.2023: set to false
+var ask_everytime = false; //true;
 
 
 function setCookie(cname, cvalue, exdays) {
