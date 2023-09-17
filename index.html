@@ -90,6 +90,21 @@ PATH: assets/pics/favicon   -->
           </a>
         </div>
 
+        <div class="gallery-item">
+          <a href="https://www.tiktok.com/@vaakaruode" data-fancybox="gallery">
+            <img src="https://vaakaruode.github.io/assets/pics/e640/e-pic-tiktok-0001" alt="Image 7">
+            <div class="image-caption">Ruode TikTok</div>
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a href="https://www.youtube.com/@vaakaruode" data-fancybox="gallery">
+            <img src="https://vaakaruode.github.io/assets/pics/e640/e-pic-youtube-0001" alt="Image 8">
+            <div class="image-caption">Ruode Tube</div>
+          </a>
+        </div>
+
+        
 
         <div class="gallery-item">
           <a href="https://vaakaruode.fi" data-fancybox="gallery">
@@ -181,7 +196,25 @@ PATH: assets/pics/favicon   -->
     </div>
 
   </div>
+ <!-- Copyright container initially hidden -->
+ <div id="copyright" class="hidden">
+  &copy; 2023 Vaakaruode Oy - All Rights Reserved
+</div>
 
+<script>
+  // Function to check if the user has scrolled down
+  function checkScroll() {
+      const copyright = document.getElementById("copyright");
+      if (window.scrollY > 500) { // Adjust the value (100 changed to 500) as needed
+          copyright.classList.remove("hidden");
+      } else {
+          copyright.classList.add("hidden");
+      }
+  }
+
+  // Listen for scroll events and call the checkScroll function
+  window.addEventListener("scroll", checkScroll);
+</script>
 
 </body>
 
