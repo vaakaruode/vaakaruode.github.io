@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  
+
   <!-- 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
@@ -20,14 +20,28 @@ PATH: assets/pics/favicon   -->
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Include SimpleLightbox CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simplelightbox.min.css">
+  <!-- Include SimpleLightbox CSS 
+    CHECK PATHS - use the latest 9/2023: https://cdnjs.com/libraries/simplelightbox
 
-  <!-- Include jQuery (required by SimpleLightbox) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simplelightbox.min.css">
+    Include jQuery (required by SimpleLightbox) 
+    
+    Include SimpleLightbox JS 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"></script>
+
+    OR
+
+    min:
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.min.js"></script>
+
+    all:
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.js"></script>
+    -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- Include SimpleLightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.min.js"></script>
 
 
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -104,7 +118,7 @@ PATH: assets/pics/favicon   -->
             <img src="assets/pics/e640/e-pic-youtube-0001.jpg" alt="Image 8">
             <div class="image-caption">Ruode Tube</div>
           </a>
-        </div>      
+        </div>
 
         <div class="gallery-item">
           <a href="https://vaakaruode.fi" data-fancybox="gallery">
@@ -196,25 +210,25 @@ PATH: assets/pics/favicon   -->
     </div>
 
   </div>
- <!-- Copyright container initially hidden -->
- <div id="copyright" class="hidden">
-  &copy; 2023 Vaakaruode Oy - All Rights Reserved
-</div>
+  <!-- Copyright container initially hidden -->
+  <div id="copyright" class="hidden">
+    &copy; 2023 Vaakaruode Oy - All Rights Reserved
+  </div>
 
-<script>
-  // Function to check if the user has scrolled down
-  function checkScroll() {
+  <script>
+    // Function to check if the user has scrolled down
+    function checkScroll() {
       const copyright = document.getElementById("copyright");
       if (window.scrollY > 500) { // Adjust the value (100 changed to 500) as needed
-          copyright.classList.remove("hidden");
+        copyright.classList.remove("hidden");
       } else {
-          copyright.classList.add("hidden");
+        copyright.classList.add("hidden");
       }
-  }
+    }
 
-  // Listen for scroll events and call the checkScroll function
-  window.addEventListener("scroll", checkScroll);
-</script>
+    // Listen for scroll events and call the checkScroll function
+    window.addEventListener("scroll", checkScroll);
+  </script>
 
 </body>
 
