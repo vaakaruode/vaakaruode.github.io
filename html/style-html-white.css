@@ -35,15 +35,25 @@ body {
   transition: opacity 0.5s;
   padding-left: 20px;
 }
+
 .fade-out-reference {
-  opacity: 0.1;
+  opacity: 0.3;
   transition: opacity 0.5s;
   padding-right: 20px;
   text-align: right; /* Align text to the right */
   font-size: 12px;
 }
+
+.fade-out-reference2 {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  padding-right: 20px;
+  text-align: right; /* Align text to the right */
+  font-size: 16px;
+}
+
 .fade-out-en {
-  opacity: 0.1;
+  opacity: 0.4;
   transition: opacity 0.5s;
   padding-left: 23px;
   text-align: left; /* Align text to the right */
