@@ -54,8 +54,7 @@ html, body {
 }
 
 .gallery-item img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100%;
   width: auto;
   height: auto;
   display: block;
