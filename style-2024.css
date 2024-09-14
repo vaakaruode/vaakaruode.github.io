@@ -76,7 +76,7 @@ Negative Number (e.g., translateY(-20px)): The element will be positioned above 
 */
 .section {
     /* height: 100vh; */
-    min-height: 40vh;
+    min-height: 20vh;
     /* Adjust height to a smaller value */
     display: flex;
     /* text-align: left; /* Aligns text to the left */
@@ -86,6 +86,11 @@ Negative Number (e.g., translateY(-20px)): The element will be positioned above 
     transform: translateY(30px);
     /* Initially move down */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#logo1 {
+    min-height: 0vh;
+    padding: 0px;
 }
 
 #sectionHome {
