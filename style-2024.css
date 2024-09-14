@@ -282,7 +282,7 @@ Specific override for the Contact section
 /* Social Media Links */
 .social-links {
     display: flex;
-    gap: 30px; /* Adjust spacing between buttons */
+    gap: 20px; /* Adjust spacing between buttons - small that ok in mobile */
     margin-top: 10px;
     padding: 10px;
     margin-bottom: 80px; /* Increase bottom margin for the entire container */
