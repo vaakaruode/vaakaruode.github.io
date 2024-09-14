@@ -1,21 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Vaakaruode Oy - tietosuojasivu</title>
-  </head>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
 <body>
-    <h2>EN</h2>
-  <div id="vaakapolicy-en">
-    Yo, welcome to our privacy policy page. We're all about keeping your personal information safe and secure. 
-    We use Google Analytics to track how people use our website, which helps us make it better for you. But don't worry, we don't collect any sensitive information like your credit card number or social security number. We only collect basic info like how you got to our site and which pages you looked at. And we never share that info with anyone else.
-    Basically, we just want to make sure you're having the best experience possible while you're here. So if you have any questions or concerns, just hit us up and we'll be happy to help.
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <img src="flag/eu.png" alt="English" class="flag" onclick="changeLanguage('en')">
+    <img src="flag/fi.png" alt="Finnish" class="flag" onclick="changeLanguage('fi')">
   </div>
-  <h2>FI</h2>
-  <div id="vaakapolicy-fi">
-    Hei ja tervetuloa meidän tietosuojasivulle. Me pidämme henkilökohtaisten tietojesi turvallisuus ja suojattuna erittäin tärkeänä.
-    Käytämme Google Analyticsia seuraten, miten ihmiset käyttävät sivustoamme, mikä auttaa meitä tekemään siitä entistä paremman sinulle. Älä huoli, emme kerää herkkää tietoa kuten luottokortin numeroa tai henkilötunnusta. Keräämme vain perustietoja kuten miten saavuit sivustollemme ja mitä sivuja katsoit. Ja emme koskaan jaa tietoa kenenkään kanssa.
-    Pääasiassa haluamme varmistaa, että sinulla on mahdollisimman hyvä kokemus sivustolla. Jos sinulla on kysyttävää tai huolia, ota rohkeasti yhteyttä ja autamme mielellämme.
+
+  <!-- Privacy Policy Content -->
+  <div id="privacyPolicy" class="privacy-policy">
+    <div id="policyContent">
+      <!-- English Version -->
+      <div class="policy-content" id="policy-en">
+        <h1>Privacy Policy</h1>
+        <p>
+          Welcome to Vaakaruode Oy Privacy Policy page.
+        </p>
+        <p>
+          We are committed to protecting your personal information. Our use of Google Analytics helps us understand how
+          you interact with our website so we can improve your experience. Rest assured, we do not collect sensitive
+          information such as credit card numbers or social security numbers. We only gather basic data, such as how you
+          arrived at our site and which pages you viewed. Your information is not shared with any third parties. Our
+          goal is to ensure you have the best experience possible. If you have any questions or concerns, please feel
+          free to reach out to us, and we will be happy to assist you.
+        </p>
+        <p>
+          For further details, please contact us at: vaakaruode <strong>@</strong> gmail.com
+        </p>
+      </div>
+      <!-- Finnish Version -->
+      <div class="policy-content" id="policy-fi" style="display: none;">
+        <h1>Tietosuojakäytäntö</h1>
+        <p>
+          Tervetuloa Vaakaruode Oy tietosuojasivullemme.
+        </p>
+        <p>
+          Pidämme henkilökohtaisten tietojesi suojaa ja turvallisuutta erittäin tärkeänä. Käytämme Google Analyticsia
+          seurataksemme, miten käytät sivustoamme, jotta voimme parantaa käyttökokemustasi. Älä huoli, emme kerää
+          arkaluonteisia tietoja, kuten luottokortin numeroa tai henkilötunnusta. Keräämme vain perustietoja, kuten
+          miten saavuit sivustollemme ja mitä sivuja katselit. Emme koskaan jaa tietojasi kolmansien osapuolien kanssa.
+          Tavoitteenamme on varmistaa, että sinulla on paras mahdollinen kokemus sivustollamme. Jos sinulla on
+          kysymyksiä tai huolenaiheita, ota rohkeasti yhteyttä, niin autamme mielellämme.
+        </p>
+        <p>Lisätietoja saat ottamalla yhteyttä: vaakaruode at gmail.com</p>
+
+
+      </div>
+    </div>
   </div>
-  <h2>Lisätiedot:</h2>
-    vaakaruode **at** gmail.com
+
+  <!-- JavaScript for Language Switching -->
+  <script>
+    function changeLanguage(lang) {
+      if (lang === 'en') {
+        document.getElementById('policy-en').style.display = 'block';
+        document.getElementById('policy-fi').style.display = 'none';
+      } else if (lang === 'fi') {
+        document.getElementById('policy-en').style.display = 'none';
+        document.getElementById('policy-fi').style.display = 'block';
+      }
+    }
+
+    // Default language
+    document.addEventListener('DOMContentLoaded', function () {
+      changeLanguage('en');
+    });
+  </script>
 </body>
+
+</html>

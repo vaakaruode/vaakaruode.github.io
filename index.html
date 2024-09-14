@@ -1,274 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-  <!-- 
-    
-    git status
-    git add .
-    git commit -m "x"
-    git push git@github-vaakaruode:vaakaruode/vaakaruode.github.io.git 
-  
-  
-  -->
-
-
-  <!-- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.sound.min.js"></script>
-  -->
-
-  <!-- <link rel="icon" href="assets/pics/e640/e-pic-0006.jpg" type="image/jpeg"> 
+    <!-- <link rel="icon" href="assets/pics/e640/e-pic-0006.jpg" type="image/jpeg"> 
   This was manually, these were generated with https://realfavicongenerator.net/ 
 PATH: assets/pics/favicon   -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/pics/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/pics/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/pics/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/pics/favicon/site.webmanifest">
-  <link rel="mask-icon" href="assets/pics/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Include SimpleLightbox CSS 
-    CHECK PATHS - use the latest 9/2023: https://cdnjs.com/libraries/simplelightbox
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simplelightbox.min.css">
-    Include jQuery (required by SimpleLightbox) 
-    
-    Include SimpleLightbox JS 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"></script>
-
-    OR
-
-    min:
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.min.js"></script>
-
-    all:
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.js"></script>
-    -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/pics/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/pics/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/pics/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/pics/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/pics/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <title>Vaakaruode Oy</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style-2024.css">
 
-  <title>Vaakaruode Oy</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X53KNGJC15"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X53KNGJC15"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-X53KNGJC15');
-  </script>
+        gtag('config', 'G-X53KNGJC15');
+    </script>
 
 </head>
 
 <body>
-  <div id="vaakasivu">
 
-    <div class="top-bar">
-      <button class="button" onclick="openNewPage1()">Vaakaruode Oy</button>
-      <button class="button" onclick="openNewPage2()">Vision</button>
-      <button class="button" onclick="openNewPage3()">Contact</button>
-    </div>
 
-    <div style="height: 1700px;">
-      <!-- Add some content to make the page scrollable -->
-      <!-- Your page content goes here -->
-      <br>
-      <br>
-      <br>
-      <br>
-      <p> At Vaakaruode Oy, we specialize in harnessing the power of artificial intelligence to tackle complex
-        data-related challenges. As a leading AI company, we are dedicated to providing innovative solutions that
-        empower businesses and organizations to make informed decisions, drive efficiency, and unlock new opportunities.
-      </p>
-      <p>
-       <h2> Who We Are: </h2>
-        At the core of Vaakaruode Oy is a team of passionate experts with diverse backgrounds in data science, machine
-        learning, and software engineering. We are united by a shared vision to revolutionize the way businesses
-        leverage data, using cutting-edge AI technologies to solve problems and drive growth.
-      </p>
-      <p>
-        <h2> What We Do:</h2>
-        Our comprehensive suite of services spans across various industries, offering tailored solutions to meet the
-        unique needs and objectives of our clients. Whether you're seeking predictive analytics, natural language
-        processing, computer vision, or custom AI development, we have the expertise and resources to deliver results
-        that exceed expectations.
-      </p>
-      </p>
-      <div class="gallery">
-
-        <div class="gallery-item">
-          <a href="https://vaakaruode.github.io/html/vision.html" data-fancybox="gallery">
-            <img src="assets/pics/e640/e-pic-0001.jpg" alt="Image 3">
-            <div class="image-caption">Vaakaruode Vision</div>
-          </a>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieNotice" class="cookie-overlay">
+        <div id="closeIcon" class="close-icon" onclick="acceptCookieConsent();">
+            &times;
         </div>
-        <!-- earlier: AI Based Building Regulations and Installation Instructions Analysis-->
-
-        <div class="gallery-item">
-          <a href="https://vaakaruode.github.io/html/palvelut.html" data-fancybox="gallery">
-            <img src="assets/pics/e640/e-pic-0004.jpg" alt="Image 4">
-            <div class="image-caption">AI Based Roof Services</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="https://twitter.com/vaakaruode" data-fancybox="gallery">
-            <img src="assets/pics/e640/e-pic-0005.jpg" alt="Image 5">
-            <div class="image-caption">vaakaruodeX - Twitter</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="https://www.instagram.com/vaakaruode/" data-fancybox="gallery">
-            <img src="https://vaakaruode.github.io/assets/pics/e640/e-pic-0006.jpg" alt="Image 6">
-            <div class="image-caption">AI Stories at Instagram</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="https://www.tiktok.com/@vaakaruode" data-fancybox="gallery">
-            <img src="assets/pics/e640/e-pic-tiktok-0001.jpg" alt="Image 0001">
-            <div class="image-caption">TikTok</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="https://www.youtube.com/@vaakaruode" data-fancybox="gallery">
-            <img src="assets/pics/e640/e-pic-youtube-0001.jpg" alt="Image 8">
-            <div class="image-caption">YouTube</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="https://www.pinterest.com/vaakaruode/" data-fancybox="gallery">
-            <img src="assets/pics/team/e1024/e-vaaka-0005.jpg" alt="Image 0005 - Pinterest">
-            <div class="image-caption">Pinterest</div>
-          </a>
-        </div>
-
-        <div class="gallery-item">
-          <a href="/html/vaakaruode2022/" data-fancybox="gallery">
-            <img src="assets/pics/page/vaakars.jpg" alt="Image 2">
-            <div class="image-caption">Vaakaruode 2022 - OLD</div>
-          </a>
-        </div>
-
-
-
-
-        <script>
-          $(document).ready(function () {
-            // Initialize SimpleLightbox
-            $('a[data-fancybox="gallery"]').simpleLightbox();
-          });
-        </script>
-
-
-
-        <!--  -->
-
-
-        <script>
-          function openNewPage1() {
-            // Specify the URL of the page you want to open
-            var newPageUrl = 'https://vaakaruode.fi';
-
-            // Use window.open() to open a new browser window or tab
-            window.open(newPageUrl, '_blank');
-          }
-
-          function openNewPage2() {
-            // Specify the URL of the page you want to open
-            var newPageUrl = 'https://vaakaruode.github.io/html/vision.html';
-
-            // Use window.open() to open a new browser window or tab
-            window.open(newPageUrl, '_blank');
-          }
-
-          function openNewPage3() {
-            // Specify the URL of the page you want to open
-            var newPageUrl = 'https://vaakaruode.github.io/html/palvelut.html';
-
-            // Use window.open() to open a new browser window or tab
-            window.open(newPageUrl, '_blank');
-          }
-
-          // JavaScript to hide the top bar when scrolling down
-          window.addEventListener("scroll", function () {
-            var topBar = document.querySelector(".top-bar");
-            if (window.scrollY > 50) { // Adjust this value to control when the bar disappears
-              topBar.style.top = "-100px"; // Hide the top bar
-            } else {
-              topBar.style.top = "0"; // Show the top bar
-            }
-          });
-        </script>
-
-
-        <div id="cookieNotice" class="cookie-overlay" style="display: none;">
-          <div id="closeIcon" style="display: none;">
-          </div>
-          <div class="title-wrap-policy">
+        <div class="title-wrap-policy">
             <h4>Cookie Consent</h4>
-          </div>
-          <div class="content-wrap">
-            <div class="msg-wrap">
-              <p> We use cookies to analyze our traffic for a better experience. By continuing, you agree to their use.
-                See
-                <a style="color:#0239b1;" href="https://vaakaruode.github.io/privacy-policy/">Privacy Policy</a>
-              </p>
-              <div class="btn-wrap">
-                <button class="btn-primary" onclick="acceptCookieConsent();">Accept</button>
-              </div>
-            </div>
-          </div>
         </div>
-
-        <script src="assets/js/cookieconsent.js"></script>
-      </div>
+        <div class="content-wrap">
+            <div class="msg-wrap">
+                <p>
+                    We use cookies to analyze our traffic for a better experience. By continuing, you agree to their
+                    use.
+                    See
+                    <a style="color:#0239b1;" href="https://vaakaruode.github.io/privacy-policy/">Privacy Policy</a>
+                </p>
+                <div class="btn-wrap">
+                    <button class="btn-primary" onclick="acceptCookieConsent();">Accept</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-  </div>
-  <!-- Copyright container initially hidden -->
-  <div id="copyright" class="hidden">
-    &copy; 2023 Vaakaruode Oy - All Rights Reserved
-  </div>
 
-  <script>
-    // Function to check if the user has scrolled down
-    function checkScroll() {
-      const copyright = document.getElementById("copyright");
-      if (window.scrollY > 500) { // Adjust the value (100 changed to 500) as needed
-        copyright.classList.remove("hidden");
-      } else {
-        copyright.classList.add("hidden");
-      }
-    }
+    <!-- Header with hamburger menu -->
+    <div class="header">
+        Vaakaruode Oy
+        <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+    </div>
 
-    // Listen for scroll events and call the checkScroll function
-    window.addEventListener("scroll", checkScroll);
-  </script>
+    <!-- Menu for both desktop and mobile (hidden on mobile initially) -->
+    <div class="menu" id="menu">
+        <a href="#sectionHome">Home</a>
+        <a href="#sectionWhatWeDo">What We Do</a>
+        <a href="#sectionProjectRoof">Project Roof</a>
+        <a href="#section5contact">Contact</a>
+    </div>
+
+    <!-- Content Section with Narrow Width -->
+    <div class="container">
+
+        <!-- Section 1 -->
+        <div class="section" id="sectionHome">
+            <div class="content">
+                <h2>Who We Are</h2>
+                <p>At Vaakaruode Oy, we leverage decades of experience in data analysis, machine learning, and artificial intelligence to tackle complex data challenges. Our AI-driven team, led by the founder of Vaakaruode Oy, combines deep expertise in data science and AI with a passion for advanced technologies. We deliver tailored solutions that empower businesses to make informed decisions and optimize their data usage.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: Image swipe-in -->
+        <div class="section" id="section2">
+            <!-- <div class="image-container" id="image1">
+                <img src="https://via.placeholder.com/600x400" alt="Sample Image">
+            </div>-->
+            <video class="videodm" autoplay muted>
+                <source src="html/palvelut/mp4/vaakaruode-ai-team.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="sectionWhatWeDo">
+            <div class="content">
+                <h2>What We Do</h2>
+                <p>We provide a wide range of services, including predictive analytics, natural language processing, and
+                    custom AI development. At Vaakaruode Oy, our goal is to deliver practical, results-driven solutions
+                    that meet the unique needs of each client.</p>
+                <p>Our current major project focuses on reducing the environmental impact of roof construction in
+                    Finland. We are achieving this by enhancing and extending the structures beneath the roofing to
+                    ensure they meet the latest building regulations and standards.</p>
+                <p>We offer services to both roofing companies and individual consumers. We help determine whether your
+                    roof has been installed according to the manufacturer's instructions and regulatory standards.</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Another image swipe-in -->
+        <div class="section" id="section4">
+            <div class="image-container" id="image2">
+                <video class="videodm" autoplay muted>
+                    <source src="html/palvelut/mp4/vaakaruode-protect.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Section 4a -->
+        <div class="section" id="sectionProjectRoof">
+            <div class="content">
+                <h2>Project Roof</h2>
+                <p>The Vaakaruode AI Team aims to reduce CO2 emissions by extending the lifespan of roofing systems. Our
+                    work begins with ensuring that roof installations are carried out meticulously, in compliance with
+                    the regulations set by the Ministry of the Environment.</p>
+                <p>We investigate whether underlayment has been installed according to guidelines and how moisture
+                    management has been implemented to ensure that water is directed safely outside the exterior wall
+                    line. There is a suspicion that adherence to these guidelines may not always be precise. We strive
+                    to investigate these concerns transparently and highlight any potential shortcomings.</p>
+            </div>
+        </div>
+
+        <!-- Section 4b: Another image swipe-in -->
+        <div class="section" id="section4b">
+            <div class="image-container" id="image2">
+                <video class="videodm" autoplay muted>
+                    < <source src="html/vision/mp4/vaakaruode-visio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section" id="section5contact">
+            <div class="content">
+                <h2>Contact</h2>
+                <p>Get in touch: vaakaruode@gmail.com</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Copyright container initially hidden -->
+    <div id="copyright" class="hidden">
+        &copy; 2024 Vaakaruode Oy - All Rights Reserved
+    </div>
+    <!-- JavaScript for scroll animations and hamburger menu -->
+    <script>
+        // Function to toggle menu visibility (for mobile)
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("visible");
+            menu.classList.toggle("hidden");
+        }
+
+        // Function to handle element visibility on scroll
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section');
+            const images = document.querySelectorAll('.image-container');
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            images.forEach(image => {
+                const imageTop = image.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (imageTop < windowHeight - 100) {
+                    image.classList.add('swipe-in');
+                }
+            });
+        }
+
+        // Function to check if the user is near the bottom of the page
+        function checkScrollNearBottom() {
+            const copyright = document.getElementById("copyright");
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const offset = 100; // Adjust this value to determine how close to the bottom the user must be
+
+            if (documentHeight - scrollPosition <= offset) {
+                // User is near the bottom
+                copyright.classList.remove("hidden");
+            } else {
+                // User is not near the bottom
+                copyright.classList.add("hidden");
+            }
+        }
+
+        <!-- JavaScript for handling cookie consent -->
+        function acceptCookieConsent() {
+            document.getElementById('cookieNotice').style.display = 'none';
+            localStorage.setItem('cookieConsent', 'accepted');
+            gtag('event', 'cookie_consent', {
+                'event_category': 'engagement',
+                'event_label': 'cookie_consent',
+                'value': 1
+            });
+        }
+
+        // Show the banner if the consent hasn't been given
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookieNotice').style.display = 'block';
+            }
+        });
+
+        // Listen for scroll events and call the checkScrollNearBottom function
+        window.addEventListener("scroll", checkScrollNearBottom);
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+    </script>
 
 </body>
 
 </html>
-<!--
-class="cookie-overlay
-
-  This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our
-We use cookies to analyze our traffic for a better experience. By continuing, you agree to their use.
-Just a heads up, this website uses cookies to make your browsing experience better and show you personalized recommendations. By continuing to use the site, you're cool with that.
- -->
