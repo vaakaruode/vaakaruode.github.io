@@ -421,12 +421,21 @@ https://stackoverflow.com/questions/62026207/font-face-wont-work-for-my-ttf-file
 
 https://cloudconvert.com/ttf-to-woff2
 
+create font ttf>
+https://fontstruct.com/fontstructor/edit
+
+INSTALL IN WINDOWS
+RIGHT CLICK AND USE E.G. IN GIMP
+
+convert ttf to woff and then woff to woff2
+https://cloudconvert.com/woff-to-woff2
 
 */
 @font-face {
     font-family: 'vaakaruode';
-    src: url('https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.ttf') format('truetype'),
-        url("https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.woff") format("woff");
+    src: url('https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode2.ttf') format('truetype'),
+        url("https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode2.woff") format("woff"),
+        url("https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode2.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
