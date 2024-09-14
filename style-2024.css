@@ -228,7 +228,7 @@ Solution: Separate CSS for Videos and Images
 Here's how you can modify your CSS so that both the PNG image and MP4 video scale appropriately:
 
 */
-.videodm video{
+.videodm{
     object-fit: cover;
     max-width: 80vw;
     max-height: 80vh;
