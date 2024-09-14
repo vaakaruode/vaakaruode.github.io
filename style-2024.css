@@ -88,11 +88,6 @@ Negative Number (e.g., translateY(-20px)): The element will be positioned above 
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-#logo1 {
-    min-height: 0vh;
-    padding: 0px;
-}
-
 #sectionHome {
     min-height: 10vh;
     padding: 10px;
@@ -226,8 +221,14 @@ Specific override for the Contact section
 
 
 
-/* ...................................... */
-.videodm {
+/* ...................................... 
+The issue seems to stem from the fact that object-fit: cover; works for media elements like <video> but is not suitable for static images like <img> unless the image has a fixed width and height. To fix the scaling issue for the PNG image, we need to handle the image and video differently while maintaining the desired scaling effect.
+
+Solution: Separate CSS for Videos and Images
+Here's how you can modify your CSS so that both the PNG image and MP4 video scale appropriately:
+
+*/
+.videodm video{
     object-fit: cover;
     max-width: 80vw;
     max-height: 80vh;
@@ -241,7 +242,15 @@ Specific override for the Contact section
     margin: auto;
 }
 /* ...................................... */
-
+/* For the PNG image */
+.videodm2 img {
+    max-width: 80vw;       /* Image takes up a maximum of 80% of the viewport width */
+    max-height: 80vh;      /* Image takes up a maximum of 80% of the viewport height */
+    width: 100%;           /* Image will scale to the full width of its container */
+    height: auto;          /* Maintain aspect ratio */
+    display: block;        /* Prevents inline spacing issues */
+    margin: auto;          /* Center the image horizontally */
+}
 
 
 /* ...................................... */
