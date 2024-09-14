@@ -122,6 +122,7 @@ Specific override for the Contact section
 */
 #section5contact {
     text-align: center; /* Aligns text to the center in the Contact section */
+    margin-bottom: 0;
 }
 #section5contact h1, #section5contact h2, #section5contact h3 {
     text-align: center; /* Aligns titles in the Contact section to the center */
@@ -276,3 +277,78 @@ Specific override for the Contact section
     text-align: center;
 }
 /* ...................................... */
+
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 30px; /* Adjust spacing between buttons */
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 80px; /* Increase bottom margin for the entire container */
+    justify-content: center; /* Center the container horizontally */
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%; /* Make the button circular */
+    text-align: center;
+    line-height: 20px;
+    color: white; /* Icon color */
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 24px; /* Adjust icon size */
+}
+
+
+.social-icon {
+    width: 32px; /* Adjust size as needed */
+    height: 32px; /* Adjust size as needed */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Increase bottom margin for each button */
+.social-button + .social-button {
+    margin-top: 0px;
+    margin-bottom: 10px; /* Adjust this value for more or less space between rows of buttons */
+}
+
+.social-button:hover {
+    transform: scale(1.4); /* Slightly enlarge on hover */
+}
+
+/* Specific styles for different platforms */
+.facebook {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.twitter {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.pinterest {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.youtube {
+    background-color: #ddd;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.instagram {
+    background-color: #ddd;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+
+.tiktok {
+    background-color: #ddd;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
