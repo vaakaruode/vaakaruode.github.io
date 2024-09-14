@@ -63,7 +63,7 @@ PATH: assets/pics/favicon   -->
     <!-- Header with hamburger menu -->
     <div class="header">
         Vaakaruode Oy
-        <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
 
     <!-- Menu for both desktop and mobile (hidden on mobile initially) -->
@@ -85,7 +85,7 @@ PATH: assets/pics/favicon   -->
                 </p>
             </div>
         </div>
-
+        <br>
         <!-- Section 2: Image swipe-in -->
         <div class="section" id="section2">
             <!-- <div class="image-container" id="image1">
@@ -177,7 +177,9 @@ PATH: assets/pics/favicon   -->
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
 
-                if (sectionTop < windowHeight - 100) {
+                /*  Threshold Adjustment: sectionTop < windowHeight - 50 means the element will become visible when it is within 50 pixels from the bottom of the viewport. You might need to tweak this value based on how far in advance you want the element to appear. For instance, setting it to -50 can be adjusted to ensure it matches with your visual requirements and translates smoothly. */
+
+                if (sectionTop < windowHeight - 90) {
                     section.classList.add('visible');
                 }
             });

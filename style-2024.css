@@ -61,7 +61,19 @@ html {
     flex-direction: column;
 }
 
-/* Section styling */
+/* Section styling
+
+To make the text become visible a bit earlier while scrolling, you need to adjust the way and timing when the visible class is added. This involves changing the threshold at which the class is applied or modifying the transform and opacity properties to create the desired effect. Here’s a step-by-step guide to achieve this:
+
+To show the text earlier, you can adjust the JavaScript logic that determines when to add the visible class. For example, you might want to trigger the visibility when the user has scrolled a bit less than the current threshold.
+
+Adjusting the transform and opacity properties in your CSS can also help the text appear earlier and more smoothly.
+
+Larger Number (e.g., translateY(100px)): The element will be positioned further down from its final position. This means it will need to be scrolled further down before it comes into view and transitions to its final position.
+Smaller Number (e.g., translateY(20px)): The element will be positioned closer to its final position, making it appear sooner as the user scrolls down.
+Negative Number (e.g., translateY(-20px)): The element will be positioned above its final position. This can be used to animate elements coming in from above.
+
+*/
 .section {
     /* height: 100vh; */
     min-height: 40vh;
@@ -73,7 +85,12 @@ html {
     opacity: 0;
     transform: translateY(30px);
     /* Initially move down */
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#sectionHome {
+    min-height: 10vh;
+    padding: 10px;
 }
 
 .visible {
