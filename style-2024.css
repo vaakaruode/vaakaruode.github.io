@@ -113,7 +113,11 @@ Negative Number (e.g., translateY(-20px)): The element will be positioned above 
 
 .content {
     text-align: left;
-    font-family: 'vaakaruode', sans-serif; /* Use custom font with fallback */
+}
+
+.content h2 {
+    font-family: 'vaakaruode', sans-serif;
+    /* Use custom font with fallback */
 }
 
 
@@ -123,12 +127,18 @@ o center-align the title in a specific section while keeping other text aligned 
 Specific override for the Contact section 
 */
 #section5contact {
-    text-align: center; /* Aligns text to the center in the Contact section */
+    text-align: center;
+    /* Aligns text to the center in the Contact section */
     margin-bottom: 0;
 }
-#section5contact h1, #section5contact h2, #section5contact h3 {
-    text-align: center; /* Aligns titles in the Contact section to the center */
+
+#section5contact h1,
+#section5contact h2,
+#section5contact h3 {
+    text-align: center;
+    /* Aligns titles in the Contact section to the center */
 }
+
 /* ...................................... */
 
 
@@ -219,6 +229,7 @@ Specific override for the Contact section
     transition: opacity 0.5s;
     /* Add a smooth transition effect */
 }
+
 /* ...................................... */
 
 
@@ -230,7 +241,7 @@ Solution: Separate CSS for Videos and Images
 Here's how you can modify your CSS so that both the PNG image and MP4 video scale appropriately:
 
 */
-.videodm{
+.videodm {
     object-fit: cover;
     max-width: 80vw;
     max-height: 80vh;
@@ -243,15 +254,22 @@ Here's how you can modify your CSS so that both the PNG image and MP4 video scal
     right: 0;
     margin: auto;
 }
+
 /* ...................................... */
 /* For the PNG image */
 .videodm2 img {
-    max-width: 80vw;       /* Image takes up a maximum of 80% of the viewport width */
-    max-height: 80vh;      /* Image takes up a maximum of 80% of the viewport height */
-    width: 100%;           /* Image will scale to the full width of its container */
-    height: auto;          /* Maintain aspect ratio */
-    display: block;        /* Prevents inline spacing issues */
-    margin: auto;          /* Center the image horizontally */
+    max-width: 80vw;
+    /* Image takes up a maximum of 80% of the viewport width */
+    max-height: 80vh;
+    /* Image takes up a maximum of 80% of the viewport height */
+    width: 100%;
+    /* Image will scale to the full width of its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Prevents inline spacing issues */
+    margin: auto;
+    /* Center the image horizontally */
 }
 
 
@@ -292,88 +310,123 @@ Here's how you can modify your CSS so that both the PNG image and MP4 video scal
 .content-wrap {
     text-align: center;
 }
+
 /* ...................................... */
 
 
 /* Social Media Links */
 .social-links {
     display: flex;
-    gap: 20px; /* Adjust spacing between buttons - small that ok in mobile */
+    gap: 20px;
+    /* Adjust spacing between buttons - small that ok in mobile */
     margin-top: 10px;
     padding: 10px;
-    margin-bottom: 80px; /* Increase bottom margin for the entire container */
-    justify-content: center; /* Center the container horizontally */
+    margin-bottom: 80px;
+    /* Increase bottom margin for the entire container */
+    justify-content: center;
+    /* Center the container horizontally */
 }
 
 .social-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20%; /* Make the button circular */
+    border-radius: 20%;
+    /* Make the button circular */
     text-align: center;
     line-height: 20px;
-    color: white; /* Icon color */
+    color: white;
+    /* Icon color */
     transition: background-color 0.3s, transform 0.3s;
-    font-size: 24px; /* Adjust icon size */
+    font-size: 24px;
+    /* Adjust icon size */
 }
 
 
 .social-icon {
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-    object-fit: contain; /* Maintain aspect ratio */
+    width: 32px;
+    /* Adjust size as needed */
+    height: 32px;
+    /* Adjust size as needed */
+    object-fit: contain;
+    /* Maintain aspect ratio */
 }
 
 /* Increase bottom margin for each button */
-.social-button + .social-button {
+.social-button+.social-button {
     margin-top: 0px;
-    margin-bottom: 10px; /* Adjust this value for more or less space between rows of buttons */
+    margin-bottom: 10px;
+    /* Adjust this value for more or less space between rows of buttons */
 }
 
 .social-button:hover {
-    transform: scale(1.4); /* Slightly enlarge on hover */
+    transform: scale(1.4);
+    /* Slightly enlarge on hover */
 }
 
 /* Specific styles for different platforms */
 .facebook {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 .twitter {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 .pinterest {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 .youtube {
     background-color: #ddd;
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 .instagram {
     background-color: #ddd;
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 
 .tiktok {
     background-color: #ddd;
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
 }
 
 
 
-/* Define the custom font */
+/* Define the custom font 
+
+TTF not working in Chrome::after
+https://stackoverflow.com/questions/62026207/font-face-wont-work-for-my-ttf-file-wont-load-properly
+
+
+https://cloudconvert.com/ttf-to-woff2
+
+
+*/
 @font-face {
     font-family: 'vaakaruode';
-         url('https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.ttf') format('truetype');
+    src: url('https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.ttf') format('truetype'),
+        url("https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
-
