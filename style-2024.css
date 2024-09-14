@@ -13,10 +13,8 @@ html {
     padding: 20px;
     font-size: 24px;
     position: relative;
-    font-family: 'vaakaruode', Helvetica;
-    color: rgb(183, 189, 247);
 }
-}
+
 
 .menu {
     display: flex;
@@ -115,6 +113,7 @@ Negative Number (e.g., translateY(-20px)): The element will be positioned above 
 
 .content {
     text-align: left;
+    font-family: 'vaakaruode', sans-serif; /* Use custom font with fallback */
 }
 
 
@@ -375,8 +374,6 @@ Here's how you can modify your CSS so that both the PNG image and MP4 video scal
 /* Define the custom font */
 @font-face {
     font-family: 'vaakaruode';
-         url('assets/font/vaakaruode/vaakaruode.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-weight: normal;
-    font-style: normal;
+         url('https://vaakaruode.github.io/assets/font/vaakaruode/vaakaruode.ttf') format('truetype');
 }
 
