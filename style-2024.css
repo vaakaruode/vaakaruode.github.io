@@ -444,3 +444,17 @@ https://cloudconvert.com/woff-to-woff2
     font-weight: normal;
     font-style: normal;
 }
+
+
+
+/* CSS for styling the link */
+a {
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}

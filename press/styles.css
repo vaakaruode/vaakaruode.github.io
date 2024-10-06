@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section.press-releases {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.press-release {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.press-release img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Fade-in effect when in view */
+.press-release.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ai-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+/* ...................................... */
+/* Initially hide the element */
+#copyright.hidden {
+    display: none;
+}
+
+/* Ensure the element is visible when the 'hidden' class is not applied */
+#copyright {
+    display: block;
+}
+
+#copyright {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.5s;
+    /* Add a smooth transition effect */
+}
+
+/* ...................................... */
