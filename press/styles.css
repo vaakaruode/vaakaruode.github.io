@@ -41,6 +41,7 @@ section.press-releases {
 p {
     font-size: 1.2rem;
     color: #555;
+    margin-bottom: 1rem; /* Adjust the value as needed */
 }
 
 .press-release img {
